@@ -11,7 +11,8 @@ Build and run a repeatable asset pipeline for a Godot 4.x game.
 1. **AI generation:** if the `mcp__image-gen__generate_image` tool is available,
    generate placeholder/production sprites and textures from prompts; otherwise
    guide the user to an external tool.
-2. **Aseprite → Godot:** use the Aseprite Wizard addon (see `docs/addons.md`) to
+2. **Aseprite → Godot:** use the Aseprite Wizard addon (see
+   `${CLAUDE_PLUGIN_ROOT}/skills/godot-suite-setup/references/addons.md`) to
    import `.aseprite` with tags/slices as animations.
 3. **Atlases & import:** build texture atlases; set import presets (filter, mipmaps,
    compression) appropriate to 2D pixel-art vs 3D.

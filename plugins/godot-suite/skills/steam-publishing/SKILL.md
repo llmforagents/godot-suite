@@ -18,7 +18,7 @@ Ship a Godot 4.x game on Steam via GodotSteam. Core steps here; recipes in
    committed). Guard against init failure and run without Steam in dev.
 2. **Achievements & stats:** define them on Steamworks, then set/clear from GDScript.
 3. **Cloud saves:** use Steam Remote Storage or Auto-Cloud; keep local saves as fallback.
-4. **Workshop / rich presence:** optional; see recipes.
+4. **Workshop / rich presence:** optional; see the GodotSteam docs for these APIs.
 5. **Upload builds:** configure depots and run `steamcmd` with a build script.
 
 ## Rules

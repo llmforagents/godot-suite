@@ -6,7 +6,9 @@ description: Use when the user asks for Godot work by "role" (e.g. "act as the P
 # godot-suite-orchestrator
 
 Maps the user's 25 game-dev roles to the concrete skill or agent that does the
-work. The authoritative table lives in `docs/roles.md`.
+work. The authoritative table lives in
+`${CLAUDE_PLUGIN_ROOT}/skills/godot-suite-orchestrator/references/roles.md`
+(also available at the skill-local `references/roles.md`).
 
 ## How to route
 1. Identify the role the user is asking for (match against the 25 in the table).
@@ -17,8 +19,9 @@ work. The authoritative table lives in `docs/roles.md`.
 4. If the role is ambiguous or unmapped, ask the user to clarify — do not guess.
 
 ## Routing table
-(Load `docs/roles.md` — it enumerates all 25 roles and destinations, including the
-partials: Inventory, Quest, Documentation Generator.)
+(Load `${CLAUDE_PLUGIN_ROOT}/skills/godot-suite-orchestrator/references/roles.md`
+— it enumerates all 25 roles and destinations, including the partials: Inventory,
+Quest, Documentation Generator.)
 
 Gap roles handled by godot-suite's own skills:
 - Steam Publishing → `steam-publishing`

@@ -21,7 +21,7 @@ reporting success (evidence before assertions).
 3. **Verify MCP.** Confirm `npx` is available (`npx --version`). The plugin ships
    `.mcp.json` pointing at `@coding-solo/godot-mcp`. Tell the user to run `/mcp`
    and confirm `godot` shows a green dot with tools > 0. For runtime/screenshots,
-   point to `docs/mcp-upgrade.md`.
+   point to `${CLAUDE_PLUGIN_ROOT}/skills/godot-suite-setup/references/mcp-upgrade.md`.
 4. **Install addons (opt-in).** For each addon in `references/addons.md`, ask the
    user before installing into `res://addons/`. Never overwrite an existing addon
    without asking. Record installed addon + version + date in the project's
