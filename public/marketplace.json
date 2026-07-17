@@ -9,7 +9,11 @@
   "plugins": [
     {
       "name": "godot-suite",
-      "source": "./plugins/godot-suite",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/llmforagents/godot-suite.git",
+        "path": "plugins/godot-suite"
+      },
       "description": "Curated Godot 4.x dev environment: composes GodotPrompter + Godot MCP + pinned addons, adds Steam/GDD/AI-asset/console skills and 25-role orchestration."
     }
   ]

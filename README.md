@@ -11,13 +11,31 @@ porting) plus orchestration for 25 game-dev roles.
 
 ## Install
 
+**Option A — hosted catalog (Cloudflare Pages):**
+
 ```
-claude plugins marketplace add <this-repo-url>
-claude plugins install godot-suite@godot-suite
+claude plugin marketplace add https://godot-suite.llm4agents.com/marketplace.json
+claude plugin install godot-suite@godot-suite
+```
+
+**Option B — straight from GitHub (clones the whole repo):**
+
+```
+claude plugin marketplace add llmforagents/godot-suite
+claude plugin install godot-suite@godot-suite
 ```
 
 Then run the `godot-suite-setup` skill in a Godot 4.x project to bootstrap the
 environment (GodotPrompter, MCP server, recommended addons).
+
+## Publishing
+
+The plugin lives in a public GitHub repo; the marketplace catalog
+(`public/marketplace.json`) is served as a static file from Cloudflare Pages at
+`godot-suite.llm4agents.com`. Because a URL-based marketplace only downloads the
+catalog JSON (not plugin files), the catalog references the plugin via a
+`git-subdir` source pointing back at GitHub. See `docs/publishing.md` for the
+full deploy flow.
 
 ## Design & plan
 
