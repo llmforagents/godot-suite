@@ -1,0 +1,16 @@
+{
+  "name": "godot-suite",
+  "owner": {
+    "name": "freyrecorp",
+    "url": "https://gitlab.com/jfreyre/godot-suite"
+  },
+  "description": "Curated Godot 4.x indie game dev suite for Claude Code",
+  "version": "0.1.0",
+  "plugins": [
+    {
+      "name": "godot-suite",
+      "source": "./plugins/godot-suite",
+      "description": "Curated Godot 4.x dev environment: composes GodotPrompter + Godot MCP + pinned addons, adds Steam/GDD/AI-asset/console skills and 25-role orchestration."
+    }
+  ]
+}
