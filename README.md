@@ -39,6 +39,24 @@ commands, then reload — no restart needed:
 Or from GitHub: `/plugin marketplace add llmforagents/godot-suite`.
 (`/plugin` with no arguments opens the interactive plugin manager instead.)
 
+### On Windows (GUI surfaces)
+
+**Claude Code desktop app:** click the **`+`** button next to the prompt box →
+**Plugins** → **Add plugin** to open the plugin browser; use **Manage plugins**
+to enable/disable/uninstall. (Plugins are not available in WSL sessions of the
+desktop app — use the terminal CLI there.)
+
+**VS Code extension:** run `/plugins` (plural) to open the Manage plugins dialog.
+In the **Marketplaces** tab add `https://godot-suite.llm4agents.com/marketplace.json`
+(or `llmforagents/godot-suite`), then install `godot-suite` from the **Plugins** tab.
+
+**JetBrains IDEs:** no GUI plugin manager — use the integrated terminal with the
+`claude plugin marketplace add …` / `claude plugin install …` commands above.
+
+**Windows prerequisites:** Godot 4.x and Node.js on `PATH` (the MCP server runs
+via `npx`; the plain `"command": "npx"` form in `.mcp.json` works natively on
+Windows once Node is installed — no `cmd /c` wrapper needed).
+
 ### After installing
 
 Run the `godot-suite-setup` skill in a Godot 4.x project to bootstrap the
