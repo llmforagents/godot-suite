@@ -29,5 +29,5 @@ or a combination.
 | 21 | Mobile Optimization | GP mobile shipping skill | Android/iOS |
 | 22 | Console Porting | GS `console-porting` | NEW gap skill |
 | 23 | Asset Pipeline | GS `asset-pipeline-ai` | NEW gap skill |
-| 24 | Documentation Generator | SP/generic docs skill | Document destination + limits |
+| 24 | Documentation Generator | SP/generic docs skill | PARTIAL — document destination + limits |
 | 25 | Game Designer | GS `game-design-gdd` | NEW gap skill |
