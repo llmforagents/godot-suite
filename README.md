@@ -25,7 +25,23 @@ claude plugin marketplace add llmforagents/godot-suite
 claude plugin install godot-suite@godot-suite
 ```
 
-Then run the `godot-suite-setup` skill in a Godot 4.x project to bootstrap the
+### Inside Claude Code (slash commands)
+
+You can also install without leaving a Claude Code session. Type these as slash
+commands, then reload — no restart needed:
+
+```
+/plugin marketplace add https://godot-suite.llm4agents.com/marketplace.json
+/plugin install godot-suite@godot-suite
+/reload-plugins
+```
+
+Or from GitHub: `/plugin marketplace add llmforagents/godot-suite`.
+(`/plugin` with no arguments opens the interactive plugin manager instead.)
+
+### After installing
+
+Run the `godot-suite-setup` skill in a Godot 4.x project to bootstrap the
 environment (GodotPrompter, MCP server, recommended addons).
 
 ## Publishing
