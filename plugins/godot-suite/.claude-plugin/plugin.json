@@ -1,0 +1,7 @@
+{
+  "name": "godot-suite",
+  "version": "0.1.0",
+  "description": "Curated Godot 4.x indie game dev suite: setup bootstrap, 25-role orchestration, and gap skills (Steam publishing, game design/GDD, AI asset pipeline, console porting).",
+  "author": { "name": "freyrecorp" },
+  "keywords": ["godot", "gamedev", "gdscript", "indie", "steam", "mcp"]
+}
