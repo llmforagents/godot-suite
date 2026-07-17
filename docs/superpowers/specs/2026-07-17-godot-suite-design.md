@@ -78,10 +78,14 @@ Skill **idempotente** que prepara el entorno. Al invocarse:
 
 1. **Detecta Godot**: ejecuta `godot --version`; si no es 4.x, aborta con mensaje claro.
    Si Godot no está en PATH, guía al usuario a instalarlo (no lo instala silenciosamente).
-2. **Instala GodotPrompter** por composición: añade su marketplace
-   (`claude plugins marketplace add jame581/skillsmith`) e instala el plugin
-   (`claude plugins install godot-prompter@skillsmith`). Verifica el resultado; si ya está,
-   no-op.
+2. **Instala GodotPrompter** por composición. **Los comandos exactos deben verificarse
+   contra el README actual de GodotPrompter en el momento de implementar** (el nombre del
+   marketplace y del plugin pueden cambiar; en investigación aparecían
+   `claude plugins marketplace add jame581/skillsmith` +
+   `claude plugins install godot-prompter@skillsmith`, pero el repo migró y esto NO debe
+   hardcodearse sin confirmar). El setup verifica el resultado; si ya está, no-op. Si el
+   comando de install falla o el nombre cambió, el setup lo reporta con la URL del repo en
+   vez de fallar en silencio.
 3. **Configura el MCP**: confirma que el `.mcp.json` del plugin apunta a Coding-Solo y que
    `npx` está disponible. Instruye al usuario a verificar `/mcp` (punto verde, tools > 0).
 4. **Instala addons recomendados** en `res://addons/` del proyecto activo, con versiones
@@ -101,11 +105,17 @@ Cuando el usuario pide trabajo por rol, el orchestrator/productor:
 2. Enruta a la skill/agente correcto (GodotPrompter, superpowers, o skill propia).
 3. Para trabajo multi-rol, el subagente `godot-producer` planea y delega en secuencia.
 
-Mapa completo de roles en `docs/roles.md`. Ejemplos:
+`docs/roles.md` **debe enumerar los 25 roles explícitamente** (los originales del usuario),
+cada uno con su destino: una skill de GodotPrompter, una skill de superpowers, una skill
+propia de la suite, o una combinación. Los roles "parciales" (Inventory Engineer, Quest
+System Engineer, Documentation Generator) deben resolverse de forma explícita —indicando qué
+skill los cubre y con qué limitación— en vez de quedar implícitos. Ejemplos:
 - Physics Specialist → skill de física de GodotPrompter.
 - Bug Hunter → `superpowers:systematic-debugging` + `godot-debugging`.
 - Steam Publishing → skill propia `steam-publishing`.
 - Game Designer → skill propia `game-design-gdd`.
+- Inventory / Quest Engineer → skill de gameplay de GodotPrompter (documentar cobertura real).
+- Documentation Generator → skill genérica de docs / superpowers (documentar destino).
 
 ### 5.3 Skills nuevas (los 4 huecos)
 
