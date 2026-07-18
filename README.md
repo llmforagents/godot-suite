@@ -9,6 +9,27 @@ porting) plus orchestration for 25 game-dev roles.
 
 **Requires:** Godot 4.x, Node.js (for the MCP server via `npx`).
 
+## What's included vs. installed separately
+
+`godot-suite` **composes** the Godot AI ecosystem — it does not bundle it. This
+plugin ships:
+
+- The 6 godot-suite skills, 2 agents, 1 command, and the Godot MCP config.
+
+It does **not** include, and you install **separately**:
+
+- **[GodotPrompter](https://github.com/jame581/GodotPrompter)** (jame581) — the
+  54-skill Godot 4.x knowledge base this suite orchestrates. **Not bundled here**
+  (composed by reference, not vendored). Install it as its own Claude Code plugin.
+- **The Godot MCP server** — fetched on demand via `npx @coding-solo/godot-mcp`
+  (no manual install; just needs Node.js).
+- **Godot community addons** (LimboAI, Dialogic 2, GdUnit4, …) — installed into
+  each game project's `res://addons/`, opt-in, when you run `godot-suite-setup`.
+
+The `godot-suite-setup` skill walks you through installing GodotPrompter and the
+addons. If you skip GodotPrompter, the four godot-suite gap skills still work, but
+the role-orchestration that routes to GodotPrompter's skills won't have targets.
+
 ## Install
 
 **Option A — hosted catalog (Cloudflare Pages):**
@@ -60,7 +81,10 @@ Windows once Node is installed — no `cmd /c` wrapper needed).
 ### After installing
 
 Run the `godot-suite-setup` skill in a Godot 4.x project to bootstrap the
-environment (GodotPrompter, MCP server, recommended addons).
+environment — it installs **GodotPrompter (separate plugin)**, verifies the MCP
+server, and offers the recommended addons. GodotPrompter is not bundled with this
+plugin; the setup skill installs it for you (or install it manually from
+https://github.com/jame581/GodotPrompter).
 
 ## Publishing
 
